@@ -1,0 +1,20 @@
+{
+  "name": "redux-entity-query",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^8.48.0",
+    "eslint": "^8.48.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "reselect": "^4.1.8"
+  }
+}
