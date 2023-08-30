@@ -1,3 +1,17 @@
+const glob = require("fast-glob");
+const fs = require("fs");
+const path = require("path");
+
+const pkg = JSON.parse(
+  fs.readFileSync(path.join(__dirname, "package.json"), "utf-8")
+);
+const workspaceGlobs = pkg.workspaces;
+const workspaceDirs = glob.sync(workspaceGlobs, {
+  onlyFiles: false,
+  onlyDirectories: true,
+  cwd: __dirname,
+});
+
 /** @type {import('eslint').ESLint.ConfigData} */
 module.exports = {
   env: {
@@ -16,7 +30,7 @@ module.exports = {
     "react/jsx-filename-extension": "off",
   },
   overrides: [
-    ...["examples/todoapp", "redux-entity-query"].map((workspaceDir) => ({
+    ...workspaceDirs.map((workspaceDir) => ({
       files: [`${workspaceDir}/webpack.config.mjs`],
       rules: {
         "import/no-extraneous-dependencies": [
