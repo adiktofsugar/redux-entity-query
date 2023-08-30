@@ -1,6 +1,7 @@
 # EntityQuery for Redux
 
 The primary goal of this package is to provide something like [redux-toolkit's entityAdaptor](https://redux-toolkit.js.org/api/createEntityAdapter), but:
+
 - without requiring redux-toolkit
 - without needing to use a million extraReducers
 - being primarily based on an async method
@@ -8,9 +9,10 @@ The primary goal of this package is to provide something like [redux-toolkit's e
 This doesn't handle all situations the way redux's version does, but I've had the feeling "why is it so hard to put an async method in redux" (especially for responses with keyed values) that I'm setting this up as a first pass for doing this "easily".
 
 ## How to use
+
 ```
 const listQuery = new EntityQuery(['list'], () => () => fetchList())
-const itemQuery = new EntityQuery(['item'], 
+const itemQuery = new EntityQuery(['item'],
     /** @param {string} id */
     (id) => () => fetchItem(id))
 

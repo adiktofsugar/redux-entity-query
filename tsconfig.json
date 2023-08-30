@@ -1,7 +1,13 @@
 {
-    "compilerOptions": {
-        "noEmit": true,
-        "checkJs": true,
-        "module": "NodeNext"
-    }
+  "compilerOptions": {
+    "noEmit": true,
+    "checkJs": true,
+    "module": "ESNext",
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "target": "ESNext",
+    "noImplicitAny": true,
+    "strictNullChecks": true
+  }
 }
