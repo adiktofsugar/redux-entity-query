@@ -78,8 +78,9 @@ class ItemResponse {
 }
 ```
 
-Look at the "examples" folder for more ideas on how to use this.
-Feel free to add a PR for more examples if you find this useful.
+Look at the "examples" folder for more ideas on how to use this. Everything in there should be applicable to real life.
+
+Feel free to add a PR for more examples if you find this useful!
 
 ## Why isn't this published?
 
